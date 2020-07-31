@@ -88,7 +88,6 @@ class Client {
             request.get(url, options, (err, res, body) => {
                 if (err) return console.error(`An error has occured whilst attempting to make request: ${err}`)
                 body = JSON.parse(body)
-                console.log(body)
                 if (!body.status == 200) return console.error(`An error has occured: ${functions.response(body.status)}`)
                 if (body.status == 404 || body.data == null) return console.error(`An error has occured: ${body.error}`)
                 if (res.statusCode == 200) return resolve(body.data.coupon)

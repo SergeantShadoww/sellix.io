@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/SergeantShadow1337/sellix.io/issues"
   },
-  "homepage": "https://github.com/SergeantShadow1337/sellix.io#readme"
+  "homepage": "https://github.com/SergeantShadow1337/sellix.io#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
 }
