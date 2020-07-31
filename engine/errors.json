@@ -1,0 +1,8 @@
+{
+    "e401": "Unauthorized - Unable to authenticate, please check your API key and try again.",
+    "e403": "Forbidden - The request is not allowed.",
+    "e404": "Not Found - The specified resource could not be found. Please contact developer on discord at MrShadow#0001.",
+    "e429": "Too many requests - You are being rate limited, please try again later.",
+    "e500": "Internal Server Error - Sellix.io API is currently experiencing issues, please try again later.",
+    "e503": "Service Unavailable - Sellix.io is temporarily offline for maintenance, Please try again later." 
+}
