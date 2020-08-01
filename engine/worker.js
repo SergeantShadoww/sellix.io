@@ -12,7 +12,8 @@ class Client {
             orders: `${this.url}/orders`,
             blacklist: `${this.url}/blacklists`,
             coupon: `${this.url}/coupons`,
-            feedback: `${this.url}/feedback`
+            feedback: `${this.url}/feedback`,
+            category: `${this.url}/categories`
         }
 
         // Validating API key.
@@ -138,9 +139,9 @@ class Client {
         })
     }
 
-    getFeedback(id) {
+    getBlacklist(id) {
         if (!id || id == null || id == "undefined") return console.error(`An error has occured: Please provide a blacklist ID.`)
-        var url = `${this.api.feedback}/${id}`
+        var url = `${this.api.blacklist}/${id}`
         var options = { headers: this.headers }
         return new Promise((resolve, reject) => {
             request.get(url, options, (err, res, body) => {
@@ -148,7 +149,50 @@ class Client {
                 body = JSON.parse(body)
                 if (!body.status == 200) return console.error(`An error has occured: ${functions.response(body.status)}`)
                 if (body.status == 404 || body.data == 200) return console.error(`An error has occured: ${body.error}`)
-                if (res.statusCode == 200) return resolve(body.data.feedback)
+                if (res.statusCode == 200) return resolve(body.data.blacklist)
+            })
+        })
+    }
+
+    getAllBlacklist() {
+        var url = this.api.blacklist
+        var options = { headers: this.headers }
+        return new Promise((resolve, reject) => {
+            request.get(url, options, (err, res, body) => {
+                if (err) return console.error(`An error has occured whilst attempting to make request: ${err}`)
+                body = JSON.parse(body)
+                if (!body.status == 200) return console.error(`An error has occured: ${functions.response(body.status)}`)
+                if (body.status == 404 || body.data == 200) return console.error(`An error has occured: ${body.error}`)
+                if (res.statusCode == 200) return resolve(body.data.blacklists)
+            })
+        })
+    }
+
+    getCategory(id) {
+        if (!id || id == null || id == "undefined") return console.error(`An error has occured: Please provide a category ID.`)
+        var url = `${this.api.category}/${id}`
+        var options = { headers: this.headers }
+        return new Promise((resolve, reject) => {
+            request.get(url, options, (err, res, body) => {
+                if (err) return console.error(`An error has occured whilst attempting to make request: ${err}`)
+                body = JSON.parse(body)
+                if (!body.status == 200) return console.error(`An error has occured: ${functions.response(body.status)}`)
+                if (body.status == 404 || body.data == 200) return console.error(`An error has occured: ${body.error}`)
+                if (res.statusCode == 200) return resolve(body.data.category)
+            })
+        })
+    }
+
+    getAllCategories() {
+        var url = this.api.category
+        var options = { headers: this.headers }
+        return new Promise((resolve, reject) => {
+            request.get(url, options, (err, res, body) => {
+                if (err) return console.error(`An error has occured whilst attempting to make request: ${err}`)
+                body = JSON.parse(body)
+                if (!body.status == 200) return console.error(`An error has occured: ${functions.response(body.status)}`)
+                if (body.status == 404 || body.data == 200) return console.error(`An error has occured: ${body.error}`)
+                if (res.statusCode == 200) return resolve(body.data.categories)
             })
         })
     }

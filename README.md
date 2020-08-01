@@ -62,8 +62,22 @@ Retrieves a specific feedback.
 ### getAllFeedback()
 Retrieves all feedback.
 
+### getBlacklist(ID)
+Retrieves a specific feedback.
+
+### getAllBlaclist()
+Retrieves all feedback.
+
+### getCategory(ID)
+Retrieves a specific category.
+
+### getAllCategories()
+Retrieves all categories.
+
 ---
 
 API key validator has also been implemented.
 
 More endpoints will be added soon.
+
+The option to create, edit, delete products, blacklists, orders etc via the package is being considered.
