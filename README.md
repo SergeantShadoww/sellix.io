@@ -1,4 +1,7 @@
 # sellix.io
+
+[![NPM](https://nodei.co/npm/sellix.io.png?compact=true)](https://nodei.co/npm/sellix.io/)
+
 An API wrapper for the e-commerce site known as sellix.io.
 
 ```js
@@ -25,82 +28,41 @@ const api = new Sellix.Client(apiKey)
 
 // This function returns information about a specific order based on it's ID.
 
-api.getOrder(ID)
-  .then(data => {})
-  .catch(items => {
-	console.log(items);
-  });
+api.getOrder().then(data => console.log(data)))
 
 // This funtion returns all feedback left on your profile.
 
-API.getFeedback()
-  .then(data => {})
-  .catch(items => {
-	console.log(items);
-  });
+api.getAllFeedback().then(data => console.log(data)))
 ```
 
-# Available Functions (API Endpoints)
+# Available API Endpoints
 
 ### getOrder(ID)
-Retrieves the order which you specified.
-
-### getAllOrders()
 Retrieves a specific order.
 
-### getProducts()
-Retrieves all products.
+### getAllOrders()
+Retrieves all orders.
 
-### getSpecificProduct(ID)
+### getProduct(ID)
 Retrieves a specific product.
 
-### updateProduct(ID, {})
-Updates a specific product.
+### getAllProducts()
+Retrieves all products.
 
-### getCoupons()
-Retrieves all coupons.
+### getCoupon(ID)
+Retrieves a specific coupon.
 
-### getSpecificCoupon(ID)
-Retrieves a specific coupon
+### getAllCoupons()
+Retrivies all coupons.
 
-### getQueries()
-Retrieves all queries.
-
-### getSpecificQuery(ID)
-Retrieves a specific query.
-
-### getWebhooks()
-Retrieves all webhooks.
-
-### getSpecificWebhook(ID)
-Retrieves a specific webhook.
-
-### getFeedback()
-Retrieves all feedback.
-
-### getSpecificFeedback(ID)
+### getFeedback(ID)
 Retrieves a specific feedback.
 
-### getTickets()
-Retrieves all tickets.
+### getAllFeedback()
+Retrieves all feedback.
 
-### getSpecificTicket(ID)
-Retrieves a specific ticket.
+---
 
-### getNotifications()
-Retrieves all notifications.
+API key validator has also been implemented.
 
-### markAllNotificationsAsRead()
-Marks all notifications as read.
-
-### markNotificationAsRead(ID)
-Marks a specific notification as read.
-
-### getUser()
-Retrieves your user info.
-
-### getSettings()
-Retrieves your settings.
-
-### updateSettings({})
-Updates your settings.
+More endpoints will be added soon.
