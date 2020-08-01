@@ -1,6 +1,6 @@
 {
   "name": "sellix.io",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A wrapper for Sellix.io API.",
   "main": "index.js",
   "scripts": {
