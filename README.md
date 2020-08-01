@@ -1,4 +1,5 @@
 # sellix.io
+[![author](https://img.shields.io/badge/author-MrShadow-success.svg)](https://discord.gg/Wt7JNT6) ![version](https://img.shields.io/npm/v/sellix.io.svg?color=success&label=version) ![downloads](https://img.shields.io/npm/dt/sellix.io.svg)
 
 [![NPM](https://nodei.co/npm/sellix.io.png?compact=true)](https://nodei.co/npm/sellix.io/)
 
