@@ -25,7 +25,7 @@ All calls return a promise with the data from the response. If there is an error
 ```javascript
 const Sellix = require('sellix.io');
 
-const api = new Sellix.Client(apiKey)
+const api = new Sellix.Client(api_key_here)
 
 // This function returns information about a specific order based on it's ID.
 
