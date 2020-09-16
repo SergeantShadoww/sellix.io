@@ -19,7 +19,7 @@ $ npm install sellix.io
 # API
 To make Sellix.io API calls you need to initate the Sellix.Client class by passing it your Sellix.io API Key.
 
-All calls return a promise with the data from the response. If there is an error making the request or the status of the request from Shoppy is not "success" the promise will be rejected.
+All calls return a promise with the data from the response. If there is an error making the request or the status of the request from Sellix is not "success" the promise will be rejected.
 
 # Example usage
 ```javascript
